@@ -1,10 +1,7 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<h1 class="text-center mt-4"><%= @user.username%>'s profile </h1>
+<%# <%=render 'form' %> 
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
-</div>
+<%= gravatar_for @user, size: 200%>
+<h1 class="text-center mt-4">Articles</h1>
+<%= render 'articles/article'%>
